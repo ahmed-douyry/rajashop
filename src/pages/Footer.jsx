@@ -4,7 +4,7 @@ export default function Footer (){
     const styles={
         cont:{
         
-        height: '1200px',
+        
         zIndex: 3
             
         }
