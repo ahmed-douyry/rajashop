@@ -163,7 +163,7 @@ const ProductDetails = (props) => {
             <div>
       
       <div>
-        <button className="btn w-100 btn-success text-right mt-1" onClick={click}>
+        <button className="btn w-100 btn-success text-center mt-1" onClick={click}>
           AJOUTER A LA CARTE
         </button>
         {kk && (
