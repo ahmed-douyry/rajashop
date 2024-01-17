@@ -181,7 +181,7 @@ const Menu = (props) => {
                 <h6 className='card-title text-left'>{e.title.length >19 ? e.title.substring(0,19)+"...":e.title}</h6>
                 <b><p>{e.description.length >21 ? e.description.substring(0,21)+"...":e.description}</p></b>
                 <h3 style={styles.prix}>{e.prix}</h3>
-                <button className='btn btn-success text-right w-100'>Acheter</button>
+                <button className='btn btn-success text-center w-100'>Acheter</button>
               </div>
             </Link>
           </div>
