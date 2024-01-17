@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rajashop/static/css/main.65169c0a.css",
-    "main.js": "/rajashop/static/js/main.ae4edbdf.js",
+    "main.js": "/rajashop/static/js/main.7906b4bf.js",
     "static/js/787.8f435016.chunk.js": "/rajashop/static/js/787.8f435016.chunk.js",
     "static/media/slide-4.png": "/rajashop/static/media/slide-4.b2affaa0d9728a45c356.png",
     "static/media/vsdvsd.png": "/rajashop/static/media/vsdvsd.ba4796ce0d732c98e945.png",
@@ -41,11 +41,11 @@
     "index.html": "/rajashop/index.html",
     "static/media/slick.woff": "/rajashop/static/media/slick.295183786cd8a1389865.woff",
     "main.65169c0a.css.map": "/rajashop/static/css/main.65169c0a.css.map",
-    "main.ae4edbdf.js.map": "/rajashop/static/js/main.ae4edbdf.js.map",
+    "main.7906b4bf.js.map": "/rajashop/static/js/main.7906b4bf.js.map",
     "787.8f435016.chunk.js.map": "/rajashop/static/js/787.8f435016.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65169c0a.css",
-    "static/js/main.ae4edbdf.js"
+    "static/js/main.7906b4bf.js"
   ]
 }
