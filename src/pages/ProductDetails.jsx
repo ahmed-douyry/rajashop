@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from './Navbar';
-import '../index.css'
+import '../index.css';
 import Footer from './Footer';
+
 const ProductDetails = (props) => {
   const [compt, setCompt] = useState(1);
   const [selectedSize, setSelectedSize] = useState('');
-  const[kk,setKK] = useState('')
+  const [kk, setKK] = useState('');
 
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const decrementer = () => {
     setCompt(compt - 1);
@@ -25,53 +28,51 @@ const ProductDetails = (props) => {
   const productDetails = props.listes.find((product) => product.id == id);
   const incrementer = () => {
     setCompt(compt + 1);
-    
   };
+
   if (!productDetails) {
     return <div>Product not found {id}</div>;
   }
+
   const click = () => {
     setKK('le produit a été ajouté');
   };
 
-   const prix = parseInt(productDetails.prix)
+  const prix = parseInt(productDetails.prix);
 
   return (
     <div className='container-fluid'>
-      <Navbar  />
-      <div className=" row" style={{ zIndex: 3}}>
-        <div className="col-md-6 text-center">
+      <Navbar />
+      <div className='row' style={{ zIndex: 3 }}>
+        <div className='col-md-6 text-center'>
           <img
-            style={{ width: '80%',marginTop: '100px' }}
+            style={{ width: '80%', marginTop: '100px' }}
             src={productDetails.src}
-            alt=""
+            alt=''
           />
         </div>
-        <div className="col-md-6" style={{ marginTop: '100px' }}>
+        <div className='col-md-6' style={{ marginTop: '100px' }}>
           <b>
-            <b>
-        {productDetails.descriptiong
-        }</b>
+            <b>{productDetails.descriptiong}</b>
           </b>
-          <h1 style={{color:'green'}}>{prix*compt} DH </h1>
+          <h1 style={{ color: 'green' }}>{prix * compt} DH </h1>
           <div>
-          <button className="btn btn-success" onClick={decrementer}>
+            <button className='btn btn-success' onClick={decrementer}>
               -
             </button>
             <label
-              
               style={{
                 width: '40px',
                 textAlign: 'center',
                 margin: '0 10px 0 10px',
-                fontSize:'24px'
+                fontSize: '24px',
               }}
-              
-            >{compt}</label>
-            <button onClick={incrementer} className="btn btn-success">
+            >
+              {compt}
+            </label>
+            <button onClick={incrementer} className='btn btn-success'>
               +
             </button>
-            
           </div>
           <hr />
           <div className="size-chart mt-1">
@@ -149,30 +150,26 @@ const ProductDetails = (props) => {
 
             
           </div>
-          <hr />
-          <h5>Personnalisez cet article <span style={{position:'absolute',right:'30px',}}> +80.00DH</span></h5>  
+          <h5>Personnalisez cet article <span style={{ position: 'absolute', right: '30px' }}> +80.00DH</span></h5>
           <p>Ajoutez un nom ou un numéro pour personnaliser votre t-shirt ou créer le cadeau parfait</p>
-          <div style={{display: 'flex', justifyContent: 'center'}}>
-            
-  <input type="text" placeholder='votre prénom' className='form-control' style={{width: '45%', marginRight: '20px'}} />
-  <input type="text" placeholder='votre nom' className='form-control' style={{width: '45%'}} />
-</div>
-<hr />
-          <div>
-            
-            <div>
-      
-      <div>
-        <button className="btn w-100 btn-success text-center mt-1" onClick={click}>
-          AJOUTER A LA CARTE
-        </button>
-        {kk && (
-          <div className="alert alert-success mt-2">
-            <strong>{kk}</strong>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <input type="text" placeholder='votre prénom' className='form-control' style={{ width: '45%', marginRight: '20px' }} />
+            <input type="text" placeholder='votre nom' className='form-control' style={{ width: '45%' }} />
           </div>
-        )}
-      </div>
-    </div>
+          <hr />
+          <div>
+            <div>
+              <div>
+                <button className="btn w-100 btn-success text-center mt-1" onClick={click}>
+                  AJOUTER A LA CARTE
+                </button>
+                {kk && (
+                  <div className="alert alert-success mt-2 text-center">
+                    <strong>{kk}</strong>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
